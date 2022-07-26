@@ -1,25 +1,23 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Ourimpact from "./components/Ourimpact";
 
+
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
+
+import Home from "./components/Home";
 
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <div>
       <Routes>
-        <Route path="/" element={<Header />}>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="ourimpact" element={<Ourimpact />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
+        <LoginForm />
+        <Route path="/home" element={<Home />} />
+        <Route path="/register" element={<RegisterForm />} />
       </Routes>
-    </BrowserRouter>
+    </div >
   );
 }
 export default App;

@@ -1,4 +1,9 @@
-.header-container {}
+.header-container {
+    background-image: linear-gradient(rgb(246, 195, 195), rgb(180, 180, 173));
+    height: 15vh;
+    padding-top: 20px;
+    position: sticky;
+}
 
 
 .nav-items {
