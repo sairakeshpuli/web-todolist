@@ -7,16 +7,14 @@ import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 
 const App = () => {
   return (
     <div>
-      <Routes>
-        <LoginForm />
-        <Route path="/home" element={<Home />} />
-        <Route path="/register" element={<RegisterForm />} />
-      </Routes>
+
+      <RegisterForm />
     </div >
   );
 }
