@@ -21,6 +21,7 @@ const RegisterForm = () => {
             else {
                 alert("password not matching")
             }
+            console.log("form Values", formik.values)
 
         },
         validate: (values) => {
@@ -74,8 +75,8 @@ const RegisterForm = () => {
                     <label>confirmPassword</label>
                     <input type="password" name="confirmPassword" id="confirmPassword"
                         value={formik.values.confirmPassword} onChange={formik.handleChange} />
-                    {formik.errors.confirmPassword ? <div className="errors">{formik.errors.confirmPassword}</div> : null}
-                    {formik.values.password !== formik.values.confirmPassword ? <div className="errors"> Password not match </div> : " "}
+
+                    {formik.values.password !== formik.values.confirmPassword ? <div className="errors"> Password not match </div> : null}
 
                     <button type="submit" className='reg-button'>Register </button>
 
